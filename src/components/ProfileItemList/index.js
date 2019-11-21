@@ -26,3 +26,22 @@ export default function ProfileItemList({ info }) {
     )
 
 }
+
+
+const Container = styled.div`
+padding: 10px;
+    div{
+        font-size: 20px;
+        color: #1b1f73;
+        p{
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #cccccc;
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+`;
