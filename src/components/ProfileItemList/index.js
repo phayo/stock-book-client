@@ -45,3 +45,15 @@ padding: 10px;
         }
     }
 `;
+
+ProfileItemList.defaultProps = {
+    info: {
+        name: "Victor",
+        phone: "+2348085492459",
+        email: "ovisco360@gmail.com"
+    }
+  };
+  
+  ProfileItemList.propTypes= {
+    info: PropTypes.object
+  };
