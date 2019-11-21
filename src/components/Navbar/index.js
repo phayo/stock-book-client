@@ -29,6 +29,7 @@ box-shadow: 0px -1px 6px 0px rgba(230,230,230,1);
     div{
         font-size: 20px;
         display: flex;
-        justify-content: space-evenly
+        justify-content: space-evenly;
+        color: #1b1f73;
     }
 `;
