@@ -1,0 +1,51 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$primary-color: #0797ff;
+$color-primary: #0797ff;
+$dark-color: #1b1f73;
+$secondary-color: #006ab0;
+$dark-dd: #22262a;
+$background-color: #f4f4f4;
+
+body {
+  font-family: 'Alata', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 1.7;
+  color: $dark-dd;
+  background-color: $background-color;
+}
+
+// .App {
+//   text-align: center;
+// }
+
+// .App-logo {
+//   height: 40vmin;
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
+
+// .App-link {
+//   color: #09d3ac;
+// }
