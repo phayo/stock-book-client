@@ -1,14 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Column } from '../../commons/Grid';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import {
   FaMoneyCheckAlt,
   FaClock,
   FaQuestionCircle,
   FaHandHoldingUsd,
+  FaAngleDoubleRight,
 } from 'react-icons/fa';
 
-export default function Service() {
+export default function Service({ details }) {
+  const {
+    status,
+    dateCreated,
+    balance,
+    initialCharge,
+  } = details;
   return (
     <Container>
       <div className="row">
@@ -19,10 +28,12 @@ export default function Service() {
           <h4 className="desc">Status</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">Active</h4>
+          <h4 className="initial-charge col">
+            {status ? 'In-Progress' : 'Completed'}
+          </h4>
         </Column>
       </div>
-      
+
       <div className="row">
         <Column xs={1}>
           <FaClock />
@@ -31,7 +42,7 @@ export default function Service() {
           <h4 className="desc">Date created</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="date-created">12-Dec-19</h4>
+          <h4 className="date-created col">{dateCreated}</h4>
         </Column>
       </div>
 
@@ -43,7 +54,7 @@ export default function Service() {
           <h4 className="desc">Initial Charge</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">₦25678</h4>
+          <h4 className="initial-charge col">₦{initialCharge}</h4>
         </Column>
       </div>
 
@@ -55,8 +66,11 @@ export default function Service() {
           <h4 className="desc">Balance Remaining</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">₦25678</h4>
+          <h4 className="initial-charge col">₦{balance}</h4>
         </Column>
+      </div>
+      <div className="row next">
+        <Link to="/"> More <FaAngleDoubleRight /> </Link>
       </div>
     </Container>
   );
@@ -64,9 +78,9 @@ export default function Service() {
 
 const Container = styled.div`
   width: 90%;
-  background-image: linear-gradient(to top right, #8f65ff, #ff4858);
+  background-image: linear-gradient( 135deg, #0797ff, #006ab0);
   background-color: #0797ff;
-  color: yellow;
+  color: #43cea2;
   margin: 0 auto;
   border-radius: 5px;
   padding: 1rem;
@@ -94,4 +108,26 @@ const Container = styled.div`
       text-align: right;
     }
   }
+  .next {
+    text-align: center;
+    a{
+      color: wheat;
+    }
+  }
+  .col{
+    color: wheat;
+  }
 `;
+
+Service.defaultProps = {
+  details: {
+    dateCreated: '12-Dec-19',
+    status: true,
+    initialCharge: 25678,
+    balance: 25678,
+  },
+};
+
+Service.propotype = {
+  details: PropTypes.object,
+};
