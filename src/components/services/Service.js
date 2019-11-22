@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Column } from '../../commons/Grid';
+import PropTypes from 'prop-types';
 import {
   FaMoneyCheckAlt,
   FaClock,
   FaQuestionCircle,
   FaHandHoldingUsd,
+  FaAngleDoubleRight,
 } from 'react-icons/fa';
 
-export default function Service() {
+export default function Service({ details }) {
+  const {
+    status,
+    dateCreated,
+    balance,
+    initialCharge,
+  } = details;
   return (
     <Container>
       <div className="row">
@@ -19,10 +27,12 @@ export default function Service() {
           <h4 className="desc">Status</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">Active</h4>
+          <h4 className="initial-charge">
+            {status ? 'In-Progress' : 'Completed'}
+          </h4>
         </Column>
       </div>
-      
+
       <div className="row">
         <Column xs={1}>
           <FaClock />
@@ -31,7 +41,7 @@ export default function Service() {
           <h4 className="desc">Date created</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="date-created">12-Dec-19</h4>
+          <h4 className="date-created">{dateCreated}</h4>
         </Column>
       </div>
 
@@ -43,7 +53,7 @@ export default function Service() {
           <h4 className="desc">Initial Charge</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">₦25678</h4>
+          <h4 className="initial-charge">₦{initialCharge}</h4>
         </Column>
       </div>
 
@@ -55,8 +65,11 @@ export default function Service() {
           <h4 className="desc">Balance Remaining</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">₦25678</h4>
+          <h4 className="initial-charge">₦{balance}</h4>
         </Column>
+      </div>
+      <div className="row next">
+        More <FaAngleDoubleRight />
       </div>
     </Container>
   );
@@ -94,4 +107,20 @@ const Container = styled.div`
       text-align: right;
     }
   }
+  .next {
+    text-align: center;
+  }
 `;
+
+Service.defaultProps = {
+  details: {
+    dateCreated: '12-Dec-19',
+    status: true,
+    initialCharge: 25678,
+    balance: 25678,
+  },
+};
+
+Service.propotype = {
+  details: PropTypes.object,
+};
