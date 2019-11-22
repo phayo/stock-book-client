@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Column } from '../../commons/Grid';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import {
   FaMoneyCheckAlt,
   FaClock,
@@ -27,7 +28,7 @@ export default function Service({ details }) {
           <h4 className="desc">Status</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">
+          <h4 className="initial-charge col">
             {status ? 'In-Progress' : 'Completed'}
           </h4>
         </Column>
@@ -41,7 +42,7 @@ export default function Service({ details }) {
           <h4 className="desc">Date created</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="date-created">{dateCreated}</h4>
+          <h4 className="date-created col">{dateCreated}</h4>
         </Column>
       </div>
 
@@ -53,7 +54,7 @@ export default function Service({ details }) {
           <h4 className="desc">Initial Charge</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">₦{initialCharge}</h4>
+          <h4 className="initial-charge col">₦{initialCharge}</h4>
         </Column>
       </div>
 
@@ -65,11 +66,11 @@ export default function Service({ details }) {
           <h4 className="desc">Balance Remaining</h4>
         </Column>
         <Column xs={4}>
-          <h4 className="initial-charge">₦{balance}</h4>
+          <h4 className="initial-charge col">₦{balance}</h4>
         </Column>
       </div>
       <div className="row next">
-        More <FaAngleDoubleRight />
+        <Link to="/"> More <FaAngleDoubleRight /> </Link>
       </div>
     </Container>
   );
@@ -77,9 +78,9 @@ export default function Service({ details }) {
 
 const Container = styled.div`
   width: 90%;
-  background-image: linear-gradient(to top right, #8f65ff, #ff4858);
+  background-image: linear-gradient( 135deg, #0797ff, #006ab0);
   background-color: #0797ff;
-  color: yellow;
+  color: #43cea2;
   margin: 0 auto;
   border-radius: 5px;
   padding: 1rem;
@@ -109,6 +110,12 @@ const Container = styled.div`
   }
   .next {
     text-align: center;
+    a{
+      color: wheat;
+    }
+  }
+  .col{
+    color: wheat;
   }
 `;
 
