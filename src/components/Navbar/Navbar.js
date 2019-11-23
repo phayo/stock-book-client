@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FaHome, FaChartLine, FaUserCircle, FaList } from 'react-icons/fa'
+import React from './node_modules/react'
+import styled from './node_modules/styled-components'
+import { FaHome, FaChartLine, FaUserCircle, FaList } from './node_modules/react-icons/fa'
 
 export default function Navbar() {
     return (
