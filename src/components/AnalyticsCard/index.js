@@ -109,6 +109,6 @@ Analytics.defaultProps = {
     },
   };
 
-  Analytics.propotype = {
+  Analytics.propTypes = {
     details: PropTypes.object
   };
