@@ -1,0 +1,25 @@
+.inputContainer {
+    color: rgb(10, 5, 5);
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+  }
+  .inputContainer input {
+    width: 100%;
+    padding: 1rem;
+    display: inline-block;
+    border: none;
+    /* background: whitesmoke; */
+    border: 1px #c8d7db solid;
+    border-radius: 2px;
+  }
+  input:focus {
+    outline-color: rgb(31, 31, 88);
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
