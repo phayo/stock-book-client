@@ -22,3 +22,14 @@ function InputComponenets(props) {
       )}
 
 export default InputComponenets;
+
+InputComponenets.defaultProps = {
+  type: text,
+  id:"",
+  name: "name",
+  placeholder: "enter here",
+  value: "myName",
+  label: name,
+  inputFor: name,
+
+};
