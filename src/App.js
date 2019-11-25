@@ -1,7 +1,8 @@
 import React from 'react';
 
 import ErrorBoundary from './ErrorBoundary';
-import Root from './Router'
+import Root from './Router';
+
 
 import './App.scss';
 
