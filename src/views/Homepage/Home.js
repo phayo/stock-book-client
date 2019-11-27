@@ -1,9 +1,9 @@
 import React from 'react';
 import Service from '../../components/services/Service';
-
 import Transaction from '../../components/transaction/Transaction';
-import Line from "../../components/profileItemList/ProfileItemList";
+import ProfileItemList from "../../components/profileItemList/ProfileItemList";
 import Analytics from "../../components/AnalyticsCard"
+import Navbar from '../../components/Navbar/Navbar';
 
 export default function Home() {
     return (
@@ -11,8 +11,9 @@ export default function Home() {
             This is the homepage
             <Service/>
             <Transaction/>
-            <Line/>
+            <ProfileItemList/>
             <Analytics/>
+            <Navbar />
         </div>
     )
 }
