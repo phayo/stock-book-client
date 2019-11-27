@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 
 export default function Service({ details }) {
+  console.log(details);
   const {
     status,
     dateCreated,
@@ -121,10 +122,10 @@ const Container = styled.div`
 
 Service.defaultProps = {
   details: {
-    dateCreated: '12-Dec-19',
     status: true,
-    initialCharge: 25678,
+    dateCreated: '12-Dec-19',
     balance: 25678,
+    initialCharge: 25678
   },
 };
 
