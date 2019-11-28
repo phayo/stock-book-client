@@ -71,7 +71,7 @@ export default function Service({ details }) {
         </Column>
       </div>
       <div className="row next">
-        <Link to="/"> More <FaAngleDoubleRight /> </Link>
+        {/* <Link to="/"> More <FaAngleDoubleRight /> </Link> */}
       </div>
     </Container>
   );
