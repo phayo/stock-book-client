@@ -1,14 +1,17 @@
 import React from 'react'
 import {render, cleanup} from '@testing-library/react'
-import Analytics  from './index'
+import Analytics  from './Analytics'
 
 
 
 afterEach(cleanup);
 
 describe('Analytics component', () => {
+
     test('Does not error given no props', () => {
+
         expect(() => render(<Analytics/>)).not.toThrowError();
+
     });
 
     test('Renders the correct text for the correct prop ',() => {
@@ -33,9 +36,9 @@ describe('Analytics component', () => {
             expensesAmount: 7850,
             incomeAmount: 38750
           };
+
           rerender(<Analytics details={details1} />);
 
-          console.log(rerender(<Analytics details={details1} />));
           expect(getByText(/38,750/)).not.toBeUndefined();
     })
 
