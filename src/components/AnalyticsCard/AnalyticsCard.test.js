@@ -1,6 +1,6 @@
 import React from 'react'
 import {render, cleanup} from '@testing-library/react'
-import Analytics  from './Analytics'
+import Analytics  from './AnalyticsCard'
 
 
 
