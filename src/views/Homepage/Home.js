@@ -5,6 +5,7 @@ import ProfileItemList from "../../components/profileItemList/ProfileItemList";
 import Analytics from "../../components/AnalyticsCard"
 import Navbar from '../../components/Navbar/Navbar';
 
+
 export default function Home() {
     return (
         <div>
